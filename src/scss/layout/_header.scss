@@ -1,0 +1,57 @@
+.header {
+    padding: 42px 0 157px;
+    background: radial-gradient(50% 81.67% at 50% 100.00%, rgba(246, 243, 239, 0) 0%, $clr-bgr-primary 100%);
+
+    @include tablet-down {
+        padding: 37px 0 139px;
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 78px;
+    }
+
+    &__item {
+        flex-shrink: 0;
+        width: 414px;
+        padding: 71px 57px;
+        border-radius: 60px;
+        border: 1px solid $clr-border-primary;
+        
+        @include tablet-down {
+            padding: 98px 57px;
+        }
+
+        &:first-child {
+            @include mob-down {
+                order: 1;
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 63px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        @include tablet-down {
+            top: -60px;
+        }
+    }
+
+    &__title {
+        margin: 0 auto 42px;
+
+        @include tablet-down {
+            margin: 0 auto 28px;
+        }
+    }
+
+    &__download {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,35 @@
+.title {
+    text-align: center;
+    font-size: 52px;
+    line-height: 110%;
+    font-family: 'Futura', sans-serif;
+    font-weight: 500;
+
+    @include tablet-down {
+        font-size: 44px;
+    }
+    
+    @include mob-down {
+        font-size: 36px;
+    }
+
+    &__item {
+        &:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            @include tablet-down {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__img {
+        margin: 0 10px;
+        @include tablet-down {
+            order: -1;
+            margin: 0 0 18px;
+        }
+    }
+}

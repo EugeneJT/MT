@@ -1,0 +1,31 @@
+.buttons {
+    display: flex;
+    gap: 13.5px 30px;
+
+    &--primary {
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mob-down {
+            flex-direction: column;
+        }
+
+        .buttons__link {
+            @include hover-scale-animation;
+        }
+    }
+    
+    &--secondary {
+        flex-direction: column;
+        
+        .buttons__link {
+            @include tablet-up {
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05) translateX(4px);
+                }
+            }
+        }
+    }
+}

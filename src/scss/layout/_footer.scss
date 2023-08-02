@@ -1,0 +1,27 @@
+.footer {
+    max-width: 1170px;
+    margin: 115px auto 114px;
+    padding: 16px 10px 19px;
+    text-align: center;
+    border-radius: 9px;
+    background: $clr-bgr-quarternary;
+
+    @include tablet-down {
+        margin: 48px auto;
+        padding: 11px 10px;
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 112%;
+
+        @include mob-down {
+            font-size: 16px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+}

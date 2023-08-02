@@ -1,0 +1,29 @@
+.download {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include tablet-down {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    &__description {
+        max-width: 170px;
+        @include set-text-font(14px);
+        font-weight: 500;
+        color: $clr-text-primary;
+
+        @include tablet-down {
+            text-align: center;
+            max-width: 365px;
+
+        }
+    }
+
+    &__img-container {
+        display: flex;
+        flex-direction: column;
+        gap: 13.5px;
+    }
+}

@@ -1,0 +1,117 @@
+.traiding {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+    @include laptop-down {
+        gap: 60px;
+    }
+
+    @include tablet-down {
+        flex-direction: column;
+    }
+
+    &__item {
+        position: relative;
+
+        &--primary {
+            @include tablet-down {
+                order: -1;
+            }
+
+            &::before {
+                @include pseudo;
+                right: -113px;
+                top: -72px;
+                width: 611px;
+                height: 671px;
+                transform: rotate(-120deg);
+                border-radius: 690px;
+                background: linear-gradient(180deg, rgba(0, 86, 255, .5) 0%, $clr-bgr-tertiary 100%);
+
+                @include tablet-down {
+                    right: -32px;
+                    top: -124px;
+                    width: 383px;
+                    height: 433px;
+                    border-radius: 433px;
+                }
+            }
+        }
+        
+        &--secondary {
+            @include tablet-down {
+                top: 32px;
+                text-align: center;
+            }
+
+            &::before {
+                @include pseudo;
+                left: -10px;
+                top: -65px;
+                width: 617px;
+                height: 698px;
+                transform: rotate(120deg);
+                border-radius: 698px;
+                border: 1px solid $clr-border-secondary;
+
+                @include tablet-down {
+                    left: -84px;
+                    top: -88px;
+                    z-index: -1;
+                    width: 438px;
+                    height: 495px;
+                    border-radius: 495px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        max-width: 480px;
+    }
+
+    &__composition {
+        position: relative;
+        width: 426px;
+        min-height: 669px;
+
+        @include tablet-down {
+            width: 320px;
+            min-height: 295px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        @include hover-scale-animation;
+
+        @include tablet-down {
+            width: 100%;
+            max-width: 217px;
+            height: auto;
+        }
+        
+        &--p1 {
+            left: -6px;
+            top: -104px;
+
+            @include tablet-down {
+                left: 9px;
+                top: -144px;
+            }
+        }
+       
+        &--p2 {
+            right: -56px;
+            top: -20px;
+
+            @include tablet-down {
+                right: 9px;
+                top: -93px;
+            }
+        }
+    }
+}
