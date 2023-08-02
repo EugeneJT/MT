@@ -1,0 +1,29 @@
+.u-hide-tablet-up {
+    @include tablet-up {
+        display: none;
+    }
+}
+
+.u-hide-mob-up {
+    @include mob-up {
+        display: none;
+    }
+}
+
+.u-hide-tablet-down {
+    @include tablet-down {
+        display: none;
+    }
+}
+
+.u-weight-600 {
+    font-weight: 600;
+}
+
+.u-weight-500 {
+    font-weight: 500;
+}
+
+.u-weight-300 {
+    font-weight: 300;
+}

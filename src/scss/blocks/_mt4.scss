@@ -1,0 +1,12 @@
+.mt4 {
+    max-width: 570px;
+    @include margin-auto;
+    text-align: center;
+
+    &__download {
+        display: flex;
+        justify-content: center;
+        gap: 14px 30px;
+        flex-wrap: wrap;
+    }
+}

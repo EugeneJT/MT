@@ -1,0 +1,48 @@
+.link {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+
+    &::before {
+        @include pseudo;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.5px;
+        transition: .2s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            transform: translateX(100%);
+        }
+    }
+
+    &--clr-primary {
+        color: $clr-text-primary;
+
+        &::before {
+            background-color: $clr-text-primary;
+        }
+    }
+    
+    &--clr-secondary {
+        color: $clr-text-quarternary;
+        font-weight: 700;
+
+        @include mob-down {
+            color: $clr-text-quinary;
+        }
+
+        &::before {
+            background-color: $clr-text-quarternary;
+
+            @include mob-down {
+                background-color: $clr-text-quinary;
+            }
+        }
+    }
+}
+    
